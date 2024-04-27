@@ -11,7 +11,19 @@
 		2BA0C2BC2BDAEE8600D82108 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0C2BB2BDAEE8600D82108 /* ContentView.swift */; };
 		2BA0C2BE2BDAEEA200D82108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA0C2BD2BDAEEA200D82108 /* Assets.xcassets */; };
 		2BA0C2C12BDAEEA200D82108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA0C2C02BDAEEA200D82108 /* Preview Assets.xcassets */; };
+		2BDBE3AC2BDBC73B009B27C6 /* KodecoPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDBE3AB2BDBC73B009B27C6 /* KodecoPlaygroundTests.swift */; };
+		2BDBE3B52BDBC7F2009B27C6 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDBE3B42BDBC7F2009B27C6 /* Game.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BDBE3AD2BDBC73B009B27C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA0C2AE2BDAEE8600D82108 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BA0C2B52BDAEE8600D82108;
+			remoteInfo = KodecoPlayground;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2BA0C2B62BDAEE8600D82108 /* KodecoPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KodecoPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +31,20 @@
 		2BA0C2BB2BDAEE8600D82108 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BA0C2BD2BDAEEA200D82108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BA0C2C02BDAEEA200D82108 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BDBE3A92BDBC73B009B27C6 /* KodecoPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KodecoPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BDBE3AB2BDBC73B009B27C6 /* KodecoPlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KodecoPlaygroundTests.swift; sourceTree = "<group>"; };
+		2BDBE3B42BDBC7F2009B27C6 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2BA0C2B32BDAEE8600D82108 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BDBE3A62BDBC73B009B27C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				2BA0C2B82BDAEE8600D82108 /* KodecoPlayground */,
+				2BDBE3AA2BDBC73B009B27C6 /* KodecoPlaygroundTests */,
 				2BA0C2B72BDAEE8600D82108 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2BA0C2B62BDAEE8600D82108 /* KodecoPlayground.app */,
+				2BDBE3A92BDBC73B009B27C6 /* KodecoPlaygroundTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,7 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				2BA0C2B92BDAEE8600D82108 /* KodecoPlaygroundApp.swift */,
-				2BA0C2BB2BDAEE8600D82108 /* ContentView.swift */,
+				2BDBE3B32BDBC7C5009B27C6 /* View */,
+				2BDBE3B22BDBC7BE009B27C6 /* Model */,
 				2BA0C2BD2BDAEEA200D82108 /* Assets.xcassets */,
 				2BA0C2BF2BDAEEA200D82108 /* Preview Content */,
 			);
@@ -65,6 +90,30 @@
 				2BA0C2C02BDAEEA200D82108 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BDBE3AA2BDBC73B009B27C6 /* KodecoPlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BDBE3AB2BDBC73B009B27C6 /* KodecoPlaygroundTests.swift */,
+			);
+			path = KodecoPlaygroundTests;
+			sourceTree = "<group>";
+		};
+		2BDBE3B22BDBC7BE009B27C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BDBE3B42BDBC7F2009B27C6 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BDBE3B32BDBC7C5009B27C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BA0C2BB2BDAEE8600D82108 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +136,24 @@
 			productReference = 2BA0C2B62BDAEE8600D82108 /* KodecoPlayground.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2BDBE3A82BDBC73B009B27C6 /* KodecoPlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BDBE3AF2BDBC73B009B27C6 /* Build configuration list for PBXNativeTarget "KodecoPlaygroundTests" */;
+			buildPhases = (
+				2BDBE3A52BDBC73B009B27C6 /* Sources */,
+				2BDBE3A62BDBC73B009B27C6 /* Frameworks */,
+				2BDBE3A72BDBC73B009B27C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BDBE3AE2BDBC73B009B27C6 /* PBXTargetDependency */,
+			);
+			name = KodecoPlaygroundTests;
+			productName = KodecoPlaygroundTests;
+			productReference = 2BDBE3A92BDBC73B009B27C6 /* KodecoPlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +166,10 @@
 				TargetAttributes = {
 					2BA0C2B52BDAEE8600D82108 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					2BDBE3A82BDBC73B009B27C6 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 2BA0C2B52BDAEE8600D82108;
 					};
 				};
 			};
@@ -116,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				2BA0C2B52BDAEE8600D82108 /* KodecoPlayground */,
+				2BDBE3A82BDBC73B009B27C6 /* KodecoPlaygroundTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +202,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BDBE3A72BDBC73B009B27C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,11 +217,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA0C2BC2BDAEE8600D82108 /* ContentView.swift in Sources */,
+				2BDBE3B52BDBC7F2009B27C6 /* Game.swift in Sources */,
 				2BA0C2BA2BDAEE8600D82108 /* KodecoPlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2BDBE3A52BDBC73B009B27C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BDBE3AC2BDBC73B009B27C6 /* KodecoPlaygroundTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BDBE3AE2BDBC73B009B27C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BA0C2B52BDAEE8600D82108 /* KodecoPlayground */;
+			targetProxy = 2BDBE3AD2BDBC73B009B27C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2BA0C2C22BDAEEA200D82108 /* Debug */ = {
@@ -317,6 +413,50 @@
 			};
 			name = Release;
 		};
+		2BDBE3B02BDBC73B009B27C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RAVRJW6GQC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.KodecoPlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KodecoPlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KodecoPlayground";
+			};
+			name = Debug;
+		};
+		2BDBE3B12BDBC73B009B27C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RAVRJW6GQC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xd.KodecoPlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KodecoPlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KodecoPlayground";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +474,15 @@
 			buildConfigurations = (
 				2BA0C2C52BDAEEA200D82108 /* Debug */,
 				2BA0C2C62BDAEEA200D82108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BDBE3AF2BDBC73B009B27C6 /* Build configuration list for PBXNativeTarget "KodecoPlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BDBE3B02BDBC73B009B27C6 /* Debug */,
+				2BDBE3B12BDBC73B009B27C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
