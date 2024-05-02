@@ -39,9 +39,24 @@ struct RoundedImageViewFilled: View {
     }
 }
 
+struct RoundRectTextView: View {
+    
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.title)
+            .bold()
+            .overlay {
+                RoundedRectangle(cornerRadius: 20)
+                    .strokeBorder(Color.gray, lineWidth: 2, antialiased: false)
+                    .frame(width: 100, height: 84)
+            }
+    }
+}
+
 struct RoundedViews_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedImageViewStroked(systemName: "arrow.counterclockwise")
-        RoundedImageViewFilled(systemName: "list.bullet")
+        RoundRectTextView(text: "999")
     }
 }

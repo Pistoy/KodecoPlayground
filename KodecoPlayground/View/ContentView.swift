@@ -13,19 +13,19 @@ struct ContentView: View {
     @State private var isVisible = false
     var body: some View {
         ZStack {
-            Color("BackgroundColor")
+            BackgroundView(game: $game)
             VStack {
                 InstructionView(game: $game)
                 SliderView(sliderValue: $sliderValue)
                 HitMeButton(isAlertVisible: $isVisible, sliderValue: $sliderValue, game: $game)
             }
             .padding()
-        }.ignoresSafeArea()
+        }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

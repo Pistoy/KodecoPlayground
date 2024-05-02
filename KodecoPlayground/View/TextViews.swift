@@ -65,3 +65,13 @@ struct HitMeButtonText: View {
     }
 }
 
+struct LabelText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .font(.title3)
+            .foregroundColor(Color("TextColor"))
+            .kerning(2)
+    }
+}
+

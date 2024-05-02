@@ -9,6 +9,8 @@ import Foundation
 
 struct Game {
     
+    var score: Int = 999
+    var round: Int = 99
     var target = Int.random(in: 1...100)
     
     func calcPoint(_ sliderValue: Double) -> Int {
