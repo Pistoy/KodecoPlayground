@@ -16,11 +16,23 @@ struct ContentView: View {
             BackgroundView(game: $game)
             VStack {
                 InstructionView(game: $game)
-                SliderView(sliderValue: $sliderValue)
-                HitMeButton(isAlertVisible: $isVisible, sliderValue: $sliderValue, game: $game)
+                    .padding(.bottom, isVisible ? 300 : 100)
+                if !isVisible {
+                    HitMeButton(isAlertVisible: $isVisible, sliderValue: $sliderValue, game: $game)
+                }
             }
             .padding()
+            if !isVisible {
+                SliderView(sliderValue: $sliderValue)
+                    .transition(.scale)
+            }
         }
+        .overlay(content: {
+            if isVisible {
+                PointsView(isAlertVisible: $isVisible, sliderValue: $sliderValue, game: $game)
+                    .transition(.scale)
+            }
+        })
     }
 }
 

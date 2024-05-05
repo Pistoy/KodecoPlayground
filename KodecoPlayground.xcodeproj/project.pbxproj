@@ -19,6 +19,7 @@
 		2BE08CA42BDCFC8400BAED3C /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE08CA32BDCFC8400BAED3C /* ButtonViews.swift */; };
 		2BF8BB9E2BE369FB00BEEC0B /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8BB9D2BE369FB00BEEC0B /* RoundedViews.swift */; };
 		2BF8BBA02BE3835100BEEC0B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8BB9F2BE3835100BEEC0B /* BackgroundView.swift */; };
+		2BF8BBA22BE77B5400BEEC0B /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF8BBA12BE77B5400BEEC0B /* PointsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2BE08CA32BDCFC8400BAED3C /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		2BF8BB9D2BE369FB00BEEC0B /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		2BF8BB9F2BE3835100BEEC0B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		2BF8BBA12BE77B5400BEEC0B /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				2BE08CA32BDCFC8400BAED3C /* ButtonViews.swift */,
 				2BF8BB9D2BE369FB00BEEC0B /* RoundedViews.swift */,
 				2BF8BB9F2BE3835100BEEC0B /* BackgroundView.swift */,
+				2BF8BBA12BE77B5400BEEC0B /* PointsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				2BDBE3B52BDBC7F2009B27C6 /* Game.swift in Sources */,
 				2BF8BB9E2BE369FB00BEEC0B /* RoundedViews.swift in Sources */,
 				2BA0C2BA2BDAEE8600D82108 /* KodecoPlaygroundApp.swift in Sources */,
+				2BF8BBA22BE77B5400BEEC0B /* PointsView.swift in Sources */,
 				2BE08CA02BDCFC5D00BAED3C /* SliderViews.swift in Sources */,
 				2BE08CA22BDCFC6F00BAED3C /* InstructionView.swift in Sources */,
 			);

@@ -75,3 +75,23 @@ struct LabelText: View {
     }
 }
 
+struct BodyText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .lineSpacing(5)
+            .multilineTextAlignment(.center)
+    }
+}
+
+struct AlertButtonText: View {
+    var body: some View {
+        Text("Start New Round")
+            .padding()
+            .foregroundColor(Color.white)
+            .bold()
+            .frame(width: 250)
+            .background(Color.red)
+            .cornerRadius(21)
+    }
+}

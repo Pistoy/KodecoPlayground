@@ -13,12 +13,27 @@ struct HitMeButton: View {
     @Binding var game: Game
     var body: some View {
         Button {
-            print(game.calcPoint(sliderValue))
+            withAnimation {
+                isAlertVisible = true
+            }
+            game.newRound(points: game.calcPoint(sliderValue))
         } label: {
             HitMeButtonText(text: "HIT ME")
         }
-
     }
 }
 
+struct Test: View {
+    @State private var value = false
+    var body: some View {
+        HitMeButton(isAlertVisible: $value, sliderValue: .constant(50), game: .constant(Game()))
+    }
+}
 
+struct MyPreviewProvider_PreviewsASD: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            
+        }
+    }
+}

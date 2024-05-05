@@ -10,8 +10,15 @@ import SwiftUI
 struct InstructionView: View {
     @Binding var game: Game
     var body: some View {
-        InstructionText(text: "PUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
-        BigNumberText(text: String(game.target))
+        VStack {
+            InstructionText(text: "PUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+            BigNumberText(text: String(game.target))
+        }
     }
 }
 
+struct MyPreviewProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        InstructionView(game: .constant(Game()))
+    }
+}
