@@ -69,8 +69,9 @@ struct LabelText: View {
     var text: String
     var body: some View {
         Text(text)
-            .font(.title3)
+            .font(.body)
             .foregroundColor(Color("TextColor"))
+            .bold()
             .kerning(2)
     }
 }
@@ -93,5 +94,38 @@ struct AlertButtonText: View {
             .frame(width: 250)
             .background(Color.red)
             .cornerRadius(21)
+    }
+}
+
+struct ScoreText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .frame(width: Constants.LeaderBoard.scoreColumnWidth)
+    }
+}
+
+struct DateText: View {
+    var date: Date
+    var body: some View {
+        Text(date, style: .time)
+            .frame(width: Constants.LeaderBoard.dateColumnWidth)
+    }
+}
+
+struct BigBoldText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .kerning(2.0)
+            .foregroundColor(Color("TextColor"))
+            .font(.title)
+            .fontWeight(.black)
+    }
+}
+
+struct Text_Previews: PreviewProvider {
+    static var previews: some View {
+        LabelText(text: "ANNEN")
     }
 }

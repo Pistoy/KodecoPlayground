@@ -39,7 +39,7 @@ struct RoundedImageViewFilled: View {
     }
 }
 
-struct RoundRectTextView: View {
+struct RoundedRectTextView: View {
     
     var text: String
     
@@ -55,8 +55,22 @@ struct RoundRectTextView: View {
     }
 }
 
+struct RoundedTextView: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .bold()
+            .padding()
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+            .overlay {
+                Circle()
+                    .strokeBorder(Color("RowBorderColor"), lineWidth: 2)
+            }
+    }
+}
+
 struct RoundedViews_Previews: PreviewProvider {
     static var previews: some View {
-        RoundRectTextView(text: "999")
+        RoundedTextView(text: "1")
     }
 }

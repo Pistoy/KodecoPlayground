@@ -8,24 +8,29 @@
 import SwiftUI
 
 struct RowView: View {
+    var index: Int
+    var score: Int
+    var date: Date
+    
     var body: some View {
         HStack {
-            RoundedTextView(text: "1")
+            RoundedTextView(text: String(index))
             Spacer()
-            Text("ads")
+            ScoreText(text: String(score))
             Spacer()
-            Text("1928")
+            DateText(date: date)
         }
-        .padding()
-        .overlay {
-            RoundedRectangle(cornerRadius: 200)
-                .strokeBorder(Color.blue.opacity(0.25))
+        .background {
+            RoundedRectangle(cornerRadius: .infinity)
+                .strokeBorder(Color("RowBorderColor"), lineWidth: 2)
         }
+        .padding(.horizontal)
+        .frame(maxWidth: Constants.LeaderBoard.maxRowWidth)
     }
 }
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView()
+        RowView(index: 1, score: 200, date: Date())
     }
 }
