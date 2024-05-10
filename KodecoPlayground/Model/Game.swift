@@ -50,9 +50,7 @@ struct Game {
     }
 }
 
-struct LeaderboardEntry: Identifiable, Codable {
-    var id = UUID()
-    
+struct LeaderboardEntry: Codable {
     let score: Int
     let date: Date
 }
