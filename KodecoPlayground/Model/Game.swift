@@ -12,13 +12,7 @@ struct Game {
     var score: Int = 0
     var round: Int = 1
     var target = Int.random(in: 1...100)
-    var leaderboardEntries: [LeaderboardEntry] = [
-        LeaderboardEntry(score: 1, date: Date()),
-        LeaderboardEntry(score: 49, date: Date()),
-        LeaderboardEntry(score: 19, date: Date()),
-        LeaderboardEntry(score: 99, date: Date()),
-        LeaderboardEntry(score: 100, date: Date()),
-    ]
+    var leaderboardEntries: [LeaderboardEntry] = []
     
     func calcPoint(_ sliderValue: Double) -> Int {
         let difference = abs(Int(sliderValue) - target)
@@ -29,6 +23,8 @@ struct Game {
         score += points
         round += 1
         target = Int.random(in: 1...100)
+        leaderboardEntries.append(LeaderboardEntry(score: points, date: Date()))
+        save()
     }
     
     mutating func restart() {
@@ -36,9 +32,27 @@ struct Game {
         round = 1
         target = Int.random(in: 1...100)
     }
+    
+    func save() {
+        if let encoded = try? JSONEncoder().encode(leaderboardEntries) {
+            UserDefaults.standard.set(encoded, forKey: "LeaderboardData")
+        }
+    }
+    
+    init() {
+        if let data = UserDefaults.standard.data(forKey: "LeaderboardData") {
+            if let decoded = try? JSONDecoder().decode([LeaderboardEntry].self, from: data) {
+                leaderboardEntries = decoded
+                return
+            }
+        }
+        leaderboardEntries = []
+    }
 }
 
-struct LeaderboardEntry {
+struct LeaderboardEntry: Identifiable, Codable {
+    var id = UUID()
+    
     let score: Int
     let date: Date
 }
